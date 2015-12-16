@@ -1,0 +1,7 @@
+.odd_row{
+    background-color:#b5ddfd;
+}
+
+.odd_row.datagrid-row-selected{
+    background-color:#ffe48d;
+}

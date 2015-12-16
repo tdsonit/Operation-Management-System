@@ -19,7 +19,13 @@ class Welcome extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-		$this->load->view('welcome_message');
+	{	   
+		$this->load->view('view_bookings');
 	}
+    
+    public function getBooking($year){
+        $this->load->model('Model_tourplan_connection');
+	   $records = $this->Model_tourplan_connection->GetBookings(2015);
+        echo json_encode($records);
+    }
 }
